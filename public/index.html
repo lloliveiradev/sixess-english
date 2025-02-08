@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <title>Sixess - English School</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description"
+          content="Página oficial da escola de inglês da Sixess, venha aprender inglês de um modo divertido e ativo!">
+     <meta name="keywords" content="inglês, educação, ensino, idiomas, professor particular, aulas online">
+     <meta name="author" content="Sixess - English School">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <link rel="icon" href="images/webp/logo-simplificado-sixess.webp">
+
+     <!--Bootstrap & Jquery-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+     <!--Firebase-->
+     <script src="/__/firebase/8.7.1/firebase-app.js"></script>
+     <script src="/__/firebase/8.7.1/firebase-auth.js"></script>
+     <script src="/__/firebase/8.7.1/firebase-firestore.js"></script>
+     <script src="/__/firebase/8.7.1/firebase-storage.js"></script>
+     <script src="/__/firebase/init.js"></script>
+
+     <!--Fonts-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@500&display=swap" rel="stylesheet">
+     <script src="https://kit.fontawesome.com/e417b2c8b7.js" crossorigin="anonymous"></script>
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column h-100">
+     <!--Nav-bar-->
+     <header>
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+               <div class="container-fluid">
+                    <a href="#" class="" style="padding-left: 2rem; padding-right: 4rem;">
+                         <img src="images/webp/logo-simplificado-branco-sixess.webp" alt="Logo - Sixess" class="text-left"
+                              style="padding-right: none !important; height: 42px; padding: 2px; border: 2px solid #6c77d4; border-radius: 5px;">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                         aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarCollapse">
+                         <ul class="navbar-nav nav-pills me-auto mb-2 mb-md-0">
+                              <li class="nav-item">
+                                   <a href="#cursos" class="nav-link text-white">
+                                        Cursos
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="#metodologia" class="nav-link text-white">
+                                        Metodologia
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="#ranking" class="nav-link text-white">
+                                        Ranking
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="#agenda" class="nav-link text-white">
+                                        Agenda
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="#precos" class="nav-link text-white">
+                                        Preços
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="#contato" class="nav-link text-white">
+                                        Contato
+                                   </a>
+                              </li>
+                              <li class="nav-item">
+                                   <a href="http://eepurl.com/hWs2y5" target="_blank" class="nav-link text-white">
+                                        Inscrição
+                                   </a>
+                              </li>
+                         </ul>
+                    </div>
+               </div>
+          </nav>
+     </header>
+
+     <!--Banner-->
+     <section id="home">
+          <!-- <div class="container shadow-sm p-3 mb-5 bg-body rounded">
+               <div class="row">
+                    <div class="col" id="banner"><br>
+                         <img src="images/New Promoção.png" alt="" class="d-block mx-auto w-100">
+                         <br>
+                         <div class="primary-button">
+                              <a href="#promo">
+                                   SAIBA MAIS
+                              </a>
+                         </div><br>
+                    </div>
+               </div>
+          </div> -->
+          <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+               <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active"
+                         aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1"
+                         aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2"
+                         aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="3"
+                         aria-label="Slide 4"></button>
+               </div>
+               <div class="carousel-inner">
+                    <div class="carousel-item active">
+                         <img src="images/webp/estude-ingles-sixess-desktop.webp" class="d-block w-100 img-desk" alt="Estude Inglês com a Sixess">
+                         <img src="images/webp/estude-ingles-sixess-mobile.webp" class="d-block w-100 img-mob" alt="Estude Inglês com a Sixess">
+                         <div class="carousel-caption d-none d-md-block">
+                              <div class="primary-button mb-5">
+                                   <a href="#cursos">
+                                        SAIBA MAIS
+                                   </a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="carousel-item">
+                         <img src="images/webp/fluencia-ingles-sixess-desktop.webp" class="d-block w-100 img-desk" alt="Fluência em Inglês">
+                         <img src="images/webp/fluencia-ingles-sixess-mobile.webp" class="d-block w-100 img-mob" alt="Fluência em Inglês">
+                    </div>
+                    <div class="carousel-item">
+                         <img src="images/webp/estude-ingles-em-grupo-sixess-desktop.webp" class="d-block w-100 img-desk" alt="Estude em Turmas ou Individual">
+                         <img src="images/webp/estude-ingles-em-grupo-sixess-mobile.webp" class="d-block w-100 img-mob" alt="Estude em Turmas ou Individual">
+                    </div>
+                    <div class="carousel-item">
+                         <img src="images/webp/ranking-sixess-desconto-desktop.webp" class="d-block w-100 img-desk" alt="Alcance o Ranking e ganhe desconto na mensalidade">
+                         <img src="images/webp/ranking-sixess-desconto-mobile.webp" class="d-block w-100 img-mob" alt="Alcance o Ranking e ganhe desconto na mensalidade">
+                    </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+               </button>
+          </div>
+     </section>
+
+     <!--Promo-->
+     <!-- <section id="promo"><br><br><br>
+          <div class="container shadow-sm p-3 mb-5 bg-body rounded">
+               <div class="row">
+                    <div class="col-12"><br>
+                         <img src="images/Sparks.png" alt="" class="d-block mx-auto rounded w-100">
+                    </div>
+                    <div class="col-12"><br>
+                         <h2>Promoção de Aniversário</h2><br>
+                         <p style="padding-right: 100px; padding-left: 100px;">
+                              Durante o mês de Junho, a Sixess completa 6 meses de atuação e quem ganha o presente é
+                              você!
+                              Além disso, o mês de Julho é o mês de aniversário do nosso Teacher Leo Oliveira.
+                              <br><br>
+                              Pensando nisso, a Sixess irá conceder <b>10% de desconto</b> nas <b>6 primeiras
+                                   mensalidades</b>, seja de
+                              qualquer plano, para todos os alunos que se matricularem durante os meses de <b>Junho</b>
+                              e <b>Julho</b>.
+                              <br><br>
+                         </p>
+                         <p style="padding-right: 100px; padding-left: 100px; text-align: center;">
+                              <b style="text-transform: uppercase;">Faça já sua matrícula e economize de R$120,00 até
+                                   R$790,00!</b>
+                              <br><br><u>MAS NÃO PARA POR AÍ!</u>
+                         </p><br>
+                         <p style="padding-right: 100px; padding-left: 100px;">
+                              O desconto da Promoção pode ser <b>acumulado com UM</b> desconto de outra categoria:
+                              <br><br>
+
+                              <i class="fa fa-chevron-right"></i><b> Desconto de Indicação - </b>
+                              Indique um amigo, seja no ato da matrícula ou
+                              posteriormente,
+                              se seu amigo também se matricular, ambos ganham <b>8% de desconto nas
+                                   mensalidades</b> enquanto
+                              ambos forem alunos da Sixess! <br><br>
+
+                              <i class="fa fa-chevron-right"></i><b> Excelência no Ranking - </b>
+                              Estude e compita no ranking mensal da plataforma
+                              e ganhe <b>até 15%</b>
+                              de desconto na próxima mensalidade!
+                         </p><br>
+                         <p style="padding-right: 100px; padding-left: 100px;">
+                              Esteja atento, será válido apenas o desconto mais alto no acúmulo.
+                         </p><br>
+                         <div class="primary-button">
+                              <a href="#ranking">
+                                   RANKING
+                              </a>
+                         </div><br>
+                    </div>
+               </div>
+          </div>
+     </section> -->
+
+     <!--Cursos-->
+     <section id="cursos"><br><br><br>
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <br>
+               <p style="text-align: center !important;">
+                    <i class="fa fa-book-open" style="font-size: xx-large;"></i>
+               </p>
+               <h2><b>Cursos</b></h2><br>
+               <hr>
+               <h4 style="text-align: left;">Professor</h4>
+               <hr>
+               <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                         <img src="images/webp/professor-leo-ingles-sixess.webp" alt="Professor de inglês da Sixess, Leo Oliveira"
+                              class="shadow rounded w-100 d-block mx-auto">
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                         <br>
+                         <p>
+                              Nosso professor, Leo Oliveira, tem 25 anos, é formado em Relações Internacionais,
+                              Pós-graduado em Logística Internacional, possui certificado de <b>nível C1</b> na
+                              língua
+                              inglesa pela <a href="https://www.uninter.com/" target="_blank"><b>UNINTER</b></a> –
+                              Centro Universitário Internacional – e pela <a href="https://www.actfl.org/"
+                                   target="_blank"><b>ACTFL</b></a>
+                              - American Council on the Teaching of Foreign Languages. <br><br>
+                              Anteriormente, trabalhou em uma escola de Idiomas e como professor particular por
+                              aproximadamente 4 anos. É um ávido estudante de idiomas
+                              desde os 12 anos de idade e já estudou cerca de 7 idiomas distintos, dentre eles: o
+                              coreano, o italiano, o japonês e o espanhol. É fluente em inglês, atualmente foca
+                              seus estudos na língua alemã, e é o fundador da <b>Sixess - English School</b>&copy;.
+                         </p>
+                    </div>
+               </div><br>
+               <hr>
+               <h4 style="text-align: left;">Plataforma de Estudos</h4>
+               <hr>
+               <div class="row">
+                    <div class="col-lg-3 col-md-4">
+                         <img src="images/webp/logo-flexge.webp" alt="Logo Plataforma Flexge"
+                              class="shadow-sm rounded w-100 d-block mx-auto">
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                         <br>
+                         <p>
+                              A <b>Sixess</b> é parceira da <a
+                                   href="https://www.instagram.com/flexge/?_ga=2.95269020.1236049598.1651757447-1063212624.1643893692"
+                                   target="_blank"><b>Flexge</b></a>, empresa
+                              proprietária da plataforma de estudos em inglês utilizada nos cursos.<br><br>
+                              Ao se matricularem, os alunos tem total acesso à plataforma, para praticar suas
+                              habilidades por
+                              meio de atividades em formato de jogos, comparar sua fala com nativos,
+                              participar do Ranking e muito mais.
+                         </p>
+                    </div>
+               </div><br>
+               <p>
+                    Através da plataforma, os alunos podem fazer um <b>Teste de Nivelamento</b> para serem
+                    alocados em um dos cursos disponíveis:
+               </p>
+               <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Academic</div>
+                              Curso voltado para jovens e adultos, vai desde o nível
+                              Pré-A1 até o nível C2, contando com mais de 550 horas de estudos, levando você
+                              a alcançar a fluência no idioma. Possuindo versão web e mobile, você pode
+                              acessar a qualquer momento e de qualquer lugar;
+                         </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Adventures</div>
+                              Curso voltado para crianças que já tiveram contato com o
+                              idioma inglês, conseguindo levar a criança até o nível A1 estabelecido pelo CEFR,
+                              contando com um total de 140 horas de estudos;
+                         </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Discovery</div>
+                              Curso voltado para crianças a partir de 6 anos de idade e que tiveram
+                              pouco ou nenhum contato com a língua inglesa, é um curso inicial com bastante jogos,
+                              vídeos e músicas para as crianças se divertirem enquanto aprendem.
+                         </div>
+                    </li>
+               </ul><br>
+               <p>
+                    Além das plataformas de estudo, o aplicativo <b>Parents</b> permite que pais ou responsáveis
+                    vejam o progresso de seus filhos, seu desemplenho e dedicação, possibilitando um acompanhamento
+                    mais eficaz e auxiliando quando necessário.<br><br>
+                    Ao final de cada curso, um teste de certificação será realizado, gerando um Certificado
+                    de Conclusão válido se o aluno alcançar os padrões dispostos pelo CEFR.<br><br>
+                    O material preparado é lúdico e tecnológico, disponível 24h por dia e 100% online. Com
+                    mais de 30 mil exercícios e mais de 15 modalidades diferentes de jogos e atividades com
+                    pontuação.
+               </p>
+          </div>
+     </section>
+
+     <!--Metodologia-->
+     <section id="metodologia"><br><br><br>
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <p style="text-align: center !important;">
+                    <i class="fa fa-chalkboard-teacher" style="font-size: xx-large;"></i>
+               </p>
+               <h2><b>Metodologia</b></h2><br>
+               <div class="row"><br>
+                    <div class="col-md-4 col-lg-3">
+                         <img src="images/webp/metodologia-ingles-sixess.webp" alt="Metodologia de Ensino de Inglês da Sixess" class="rounded d-block mx-auto w-100">
+                         <br>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                         <br>
+                         <p>
+                              Nossa escola utiliza metodologias ativas de ensino trabalhando as 4 habilidades de
+                              domínio do idioma - <b>Speaking</b> (habilidade de fala), <b>Listening</b>
+                              (compreensão auditiva),
+                              <b>Reading</b> (compreensão textual) e <b>Writing</b> (habilidade escrita) - de
+                              acordo com o CEFR
+                              - Quadro Comum Europeu.
+                         </p>
+                    </div>
+               </div>
+               <br>
+               <ul class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Ensino Híbrido</div>
+                              O ensino é divido em dois momentos:
+                              <ol type="A">
+                                   <li>Aulas expositivas, em salas presenciais ou remotas por vídeo chamada;</li>
+                                   <li>
+                                        Lições e atividades em plataforma online, fora de sala, por meio de
+                                        computadores, tablets ou smartphones.
+                                   </li>
+                              </ol>
+                         </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Sala de Aula Invertida</div>
+                              Nesse modelo, os alunos tem contato com o conteúdo
+                              primeiro através da plataforma, que é então descomplicado durante as aulas
+                              expositivas;
+                         </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Abordagem Comunicativa</div>
+                              O foco é na interação entre os alunos e o professor,
+                              entender os significados e como usá-los ativamente por meio de aulas de conversação.
+                              A intenção é que o professor se comunique sempre na língua inglesa e que os alunos
+                              aprendam através de associação, jogos, dinâmicas e muita prática;
+                         </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                         <div class="ms-2 me-auto">
+                              <div class="fw-bold">Aulas personalizadas</div>
+                              Através dos indicadores de estudo do aluno, coletados
+                              durante suas atividades na plataforma, o professor consegue identificar as
+                              dificuldades,
+                              desafios e objetivos do aluno e preparar aulas únicas voltadas à ele;
+                         </div>
+                    </li>
+               </ul><br>
+          </div>
+     </section>
+
+     <!--Ranking-->
+     <section id="ranking"><br><br><br>
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <br>
+               <p style="text-align: center !important;">
+                    <i class="fa fa-award" style="font-size: xx-large;"></i>
+               </p>
+               <h2><b>Ranking</b></h2><br>
+               <p style="text-align: center;">
+                    A cada mês, os alunos de toda a escola de inglês da Sixess concorrem aos seguintes descontos:
+               </p><br>
+               <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                         <br>
+                         <img src="images/webp/ranking-sixess-10-porcento.webp" alt="Desconto de 10% para o Top 3 da Escola" class="d-block mx-auto w-100 rounded">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                         <br>
+                         <img src="images/webp/ranking-sixess-12-porcento.webp" alt="Desconto de 12% para o Top 5 da Região" class="d-block mx-auto w-100 rounded">
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                         <br>
+                         <img src="images/webp/ranking-sixess-15-porcento.webp" alt="Desconto de 15% para o Top 10 do Brasil" class="d-block mx-auto w-100 rounded">
+                    </div>
+               </div><br><br>
+               <p>
+                    <b>* Apenas o maior desconto adquirido será aplicado para a próxima mensalidade do aluno. <br>
+                         ** Não acumula com o Desconto de Indicação, apenas o sobrescreve.
+                    </b>
+               </p>
+          </div>
+     </section>
+
+     <!--Agenda-->
+     <section id="agenda"><br><br><br>
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <br>
+               <p style="text-align: center !important;">
+                    <i class="fa fa-calendar" style="font-size: xx-large;"></i>
+               </p>
+               <h2><b>Agenda Semanal</b></h2><br>
+               <div class="accordion" id="accordionAgenda">
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingOne">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   Segunda-feira
+                              </button>
+                         </h3>
+                         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodySeg">
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                   Terça-feira
+                              </button>
+                         </h3>
+                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodyTer">
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                   Quarta-feira
+                              </button>
+                         </h3>
+                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodyQua">
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                   Quinta-feira
+                              </button>
+                         </h3>
+                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodyQui">
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingFive">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                   Sexta-feira
+                              </button>
+                         </h3>
+                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodySex">
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingSix">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                   Sábado
+                              </button>
+                         </h3>
+                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodySab">
+
+                              </div>
+                         </div>
+                    </div>
+                    <div class="accordion-item">
+                         <h3 class="accordion-header" id="headingSeven">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                   Domingo
+                              </button>
+                         </h3>
+                         <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                              data-bs-parent="#accordionAgenda">
+                              <div class="accordion-body" id="bodyDom">
+
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!--Preços-->
+     <section id="precos"><br><br><br>
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <br>
+               <p style="text-align: center !important;">
+                    <i class="fa fa-tags" style="font-size: xx-large;"></i>
+               </p>
+               <h2><b>Preços e Serviços</b></h2><br>
+               <p>
+                    <b>Vamos fazer uma simulação e ver o que cabe no seu orçamento?</b>
+                    Utilize os botões abaixo para filtrar os serviços que deseja. <br><br>
+                    Os preços que serão apresentados são os preços base, desprovidos de quaisquer descontos.
+               </p><br>
+               <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                    border-radius: 5px;" class="p-4 fs-5">
+                    Para melhor proveito e desenvolvimento
+                    dos alunos, a Sixess trabalha com turmas de até três alunos.
+                    Começe escolhendo sua preferência de <b>turma</b>:
+               </div><br>
+               <!--Nav Turma-->
+               <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-turma" role="tablist">
+                    <li class="nav-item" role="presentation">
+                         <button class="nav-link" id="pills-individual-tab" data-bs-toggle="pill"
+                              data-bs-target="#pills-individual" type="button" role="tab"
+                              aria-controls="pills-individual" aria-selected="false">Individual</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                         <button class="nav-link" id="pills-2alunos-tab" data-bs-toggle="pill"
+                              data-bs-target="#pills-2alunos" type="button" role="tab" aria-controls="pills-2alunos"
+                              aria-selected="false">2 Alunos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                         <button class="nav-link" id="pills-3alunos-tab" data-bs-toggle="pill"
+                              data-bs-target="#pills-3alunos" type="button" role="tab" aria-controls="pills-3alunos"
+                              aria-selected="true">3 Alunos</button>
+                    </li>
+               </ul>
+               <!--Pills Turma-->
+               <div class="tab-content" id="pills-turmaContent"><br>
+                    <!--Individual-->
+                    <div class="tab-pane fade" id="pills-individual" role="tabpanel"
+                         aria-labelledby="pills-individual-tab">
+                         <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                              border-radius: 5px;" class="p-4 fs-5">
+                              Se você procura maior flexibilidade nos seus horários e um ensino
+                              completamente elaborado para você, a turma Individual é o seu lugar.
+                              <br>
+                              Agora, escolha a <b>duração</b> de cada aula:
+                         </div>
+                         <br>
+                         <!--Nav Duração 1-->
+                         <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-duracao1" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-1hora1-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-1hora1" type="button" role="tab"
+                                        aria-controls="pills-1hora1" aria-selected="false">1 Hora</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-1h301-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-1h301" type="button" role="tab"
+                                        aria-controls="pills-1h301" aria-selected="false">1h30min</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-2horas1-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-2horas1" type="button" role="tab"
+                                        aria-controls="pills-2horas1" aria-selected="true">2 horas</button>
+                              </li>
+                         </ul>
+                         <!--Pills Duração 1-->
+                         <div class="tab-content" id="pills-duracao1Content"><br>
+                              <!--1 hora-->
+                              <div class="tab-pane fade" id="pills-1hora1" role="tabpanel"
+                                   aria-labelledby="pills-1hora1-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Aulas mais rápidas são uma boa escolha para quem tem horários
+                                        apertados,
+                                        mas são igualmente produtivas. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 1 hora 1-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-1qtd1" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas1-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas1" type="button" role="tab"
+                                                  aria-controls="pills-4aulas1" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas1-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas1" type="button" role="tab"
+                                                  aria-controls="pills-8aulas1" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas1-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas1" type="button" role="tab"
+                                                  aria-controls="pills-12aulas1" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 1 hora 1-->
+                                   <div class="tab-content" id="pills-1hora1Content"><br>
+                                        <!--4 aulas 1-->
+                                        <div class="tab-pane fade" id="pills-4aulas1" role="tabpanel"
+                                             aria-labelledby="pills-4aulas1-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 200,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 50,00
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 1-->
+                                        <div class="tab-pane fade" id="pills-8aulas1" role="tabpanel"
+                                             aria-labelledby="pills-8aulas1-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 350,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 43,75
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 1-->
+                                        <div class="tab-pane fade" id="pills-12aulas1" role="tabpanel"
+                                             aria-labelledby="pills-12aulas1-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 485,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 40,42
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!--1 hora 30-->
+                              <div class="tab-pane fade" id="pills-1h301" role="tabpanel"
+                                   aria-labelledby="pills-1h301-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Essa é uma excelente duração de aula, pois pode contornar
+                                        facilmente os atrasos do início da aula e permite um melhor
+                                        fechamento, concedendo até mesmo um tempo para descontrair. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 1 hora 30 1-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-13qtd1" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas2-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas2" type="button" role="tab"
+                                                  aria-controls="pills-4aulas2" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas2-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas2" type="button" role="tab"
+                                                  aria-controls="pills-8aulas2" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas2-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas2" type="button" role="tab"
+                                                  aria-controls="pills-12aulas2" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 1 hora 30 1-->
+                                   <div class="tab-content" id="pills-1hora301Content"><br>
+                                        <!--4 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-4aulas2" role="tabpanel"
+                                             aria-labelledby="pills-4aulas2-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 265,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 66,25
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-8aulas2" role="tabpanel"
+                                             aria-labelledby="pills-8aulas2-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 450,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 56,25
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-12aulas2" role="tabpanel"
+                                             aria-labelledby="pills-12aulas2-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 610,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 50,83
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!--2 hora-->
+                              <div class="tab-pane fade" id="pills-2horas1" role="tabpanel"
+                                   aria-labelledby="pills-2horas1-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Se você dispõe de mais tempo para estudar, esta é uma
+                                        boa opção, pois permite que os conteúdos sejam mais aprofundados
+                                        durante a mesma aula, evitando que as matérias sejam interrompidas
+                                        devido a falta de tempo. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 2 hora 1-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-2qtd1" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas3-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas3" type="button" role="tab"
+                                                  aria-controls="pills-4aulas3" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas3-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas3" type="button" role="tab"
+                                                  aria-controls="pills-8aulas3" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas3-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas3" type="button" role="tab"
+                                                  aria-controls="pills-12aulas3" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 2 hora 1-->
+                                   <div class="tab-content" id="pills-2horas1Content"><br>
+                                        <!--4 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-4aulas3" role="tabpanel"
+                                             aria-labelledby="pills-4aulas3-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 320,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 80,00
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-8aulas3" role="tabpanel"
+                                             aria-labelledby="pills-8aulas3-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 590,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 73,75
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-12aulas3" role="tabpanel"
+                                             aria-labelledby="pills-12aulas3-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>Individual
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 850,00
+                                                  </li>
+                                                  <li
+                                                       class="list-group-item d-flex justify-content-between align-items-start">
+                                                       <div class="ms-2 me-auto">
+                                                            <div class="fw-normal">
+                                                                 <b>Valor p/ aula*: </b>R$ 70,83
+                                                            </div>
+                                                            O valor por aula é apenas um demonstrativo de
+                                                            transparência,
+                                                            a mensalidade é paga em parcela única com o valor
+                                                            total, preferencialmente
+                                                            até o dia 10 de cada mês.
+                                                       </div>
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!--Turma 2-->
+                    <div class="tab-pane fade" id="pills-2alunos" role="tabpanel" aria-labelledby="pills-2alunos-tab">
+                         <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                              border-radius: 5px;" class="p-4 fs-5">
+                              Se você têm aquele(a) amigo(a) inseparável, namorado(a), esposo(a) ou mesmo filho(a)
+                              que também curte inglês, essa turma é pra vocês se divertirem aprendendo juntos,
+                              além de economizar.
+                              <br><br>
+                              <b>Atenção!</b>
+                              <br>
+                              Para turmas compostas, atender as aulas no horário definido e realizar o
+                              pagamento da parte em dia é responsabilidade de cada aluno que a compõe a turma.
+                              <br>
+                              O não cumprimento de tais responsabilidades pode acarretar suspensão do
+                              contrato do aluno e até dissolução da turma, prejudicando os colegas. Portanto,
+                              faça sua parte!
+                              <br><br>
+                              Agora, escolha a <b>duração</b> de cada aula:
+                         </div><br>
+                         <!--Nav Duração 2-->
+                         <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-duracao2" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-1hora2-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-1hora2" type="button" role="tab"
+                                        aria-controls="pills-1hora2" aria-selected="false">1 Hora</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-1h302-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-1h302" type="button" role="tab"
+                                        aria-controls="pills-1h302" aria-selected="false">1h30min</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-2horas2-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-2horas2" type="button" role="tab"
+                                        aria-controls="pills-2horas2" aria-selected="true">2 horas</button>
+                              </li>
+                         </ul>
+                         <!--Pills Duração 2-->
+                         <div class="tab-content" id="pills-duracao2Content"><br>
+                              <!--1 hora-->
+                              <div class="tab-pane fade" id="pills-1hora2" role="tabpanel"
+                                   aria-labelledby="pills-1hora2-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Aulas mais rápidas são uma boa escolha para quem tem horários
+                                        apertados, mas são igualmente produtivas.
+                                        <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div>
+                                   <br>
+                                   <!--Nav 1 hora 2-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-1qtd2" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas4-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas4" type="button" role="tab"
+                                                  aria-controls="pills-4aulas4" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas4-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas4" type="button" role="tab"
+                                                  aria-controls="pills-8aulas4" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas4-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas4" type="button" role="tab"
+                                                  aria-controls="pills-12aulas4" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 1 hora 2-->
+                                   <div class="tab-content" id="pills-1hora1Content"><br>
+                                        <!--4 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-4aulas4" role="tabpanel"
+                                             aria-labelledby="pills-4aulas4-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 340,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 170,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-8aulas4" role="tabpanel"
+                                             aria-labelledby="pills-8aulas4-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 540,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 270,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 1-->
+                                        <div class="tab-pane fade" id="pills-12aulas4" role="tabpanel"
+                                             aria-labelledby="pills-12aulas4-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 770,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 385,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!--1 hora 30-->
+                              <div class="tab-pane fade" id="pills-1h302" role="tabpanel"
+                                   aria-labelledby="pills-1h302-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Essa é uma excelente duração de aula, pois pode contornar
+                                        facilmente os atrasos do início da aula e permite um melhor
+                                        fechamento, concedendo até mesmo um tempo para descontrair. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div>
+                                   <br>
+                                   <!--Nav 1 hora 30 2-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-13qtd2" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas5-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas5" type="button" role="tab"
+                                                  aria-controls="pills-4aulas5" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas5-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas5" type="button" role="tab"
+                                                  aria-controls="pills-8aulas5" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas5-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas5" type="button" role="tab"
+                                                  aria-controls="pills-12aulas5" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 1 hora 30 2-->
+                                   <div class="tab-content" id="pills-1hora302Content"><br>
+                                        <!--4 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-4aulas5" role="tabpanel"
+                                             aria-labelledby="pills-4aulas5-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 440,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 220,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-8aulas5" role="tabpanel"
+                                             aria-labelledby="pills-8aulas5-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 760,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 380,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 2-->
+                                        <div class="tab-pane fade" id="pills-12aulas5" role="tabpanel"
+                                             aria-labelledby="pills-12aulas5-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.080,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 540,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!--2 hora-->
+                              <div class="tab-pane fade" id="pills-2horas2" role="tabpanel"
+                                   aria-labelledby="pills-2horas2-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Se você dispõe de mais tempo para estudar, esta é uma
+                                        boa opção, pois permite que os conteúdos sejam mais aprofundados
+                                        durante a mesma aula, evitando que as matérias sejam interrompidas
+                                        devido a falta de tempo. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 2 hora 2-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-2qtd2" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas6-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas6" type="button" role="tab"
+                                                  aria-controls="pills-4aulas6" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas6-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas6" type="button" role="tab"
+                                                  aria-controls="pills-8aulas6" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas6-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas6" type="button" role="tab"
+                                                  aria-controls="pills-12aulas6" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 2 hora 2-->
+                                   <div class="tab-content" id="pills-2horas2Content"><br>
+                                        <!--4 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-4aulas6" role="tabpanel"
+                                             aria-labelledby="pills-4aulas6-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 560,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 280,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-8aulas6" role="tabpanel"
+                                             aria-labelledby="pills-8aulas6-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 980,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 490,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-12aulas6" role="tabpanel"
+                                             aria-labelledby="pills-12aulas6-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>2 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.380,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 690,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <!--Turma 3-->
+                    <div class="tab-pane fade" id="pills-3alunos" role="tabpanel" aria-labelledby="pills-3alunos-tab">
+                         <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                              border-radius: 5px;" class="p-4 fs-5">
+                              O trio inseparável? Os próprios Naruto, Sasuke e Sakura do seu bairro?
+                              Essa turma é pra você, com diversas atividades em grupo, muita interação e
+                              brincadeiras de sobra, você se diverte com seus amigos, aprende inglês e
+                              ainda economiza uma grana.
+                              <br><br>
+                              <b>Atenção!</b>
+                              <br>
+                              Para turmas compostas, atender as aulas no horário definido e realizar o
+                              pagamento da parte em dia é responsabilidade de cada aluno que a compõe a turma.
+                              <br>
+                              O não cumprimento de tais responsabilidades pode acarretar suspensão do
+                              contrato do aluno e até dissolução da turma, prejudicando os colegas. Portanto,
+                              faça sua parte!
+                              <br><br>
+                              Agora, escolha a <b>duração</b> de cada aula:
+                         </div><br>
+                         <!--Nav Duração 3-->
+                         <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-duracao3" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-1hora3-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-1hora3" type="button" role="tab"
+                                        aria-controls="pills-1hora3" aria-selected="false">1 Hora</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-1h303-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-1h303" type="button" role="tab"
+                                        aria-controls="pills-1h303" aria-selected="false">1h30min</button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                   <button class="nav-link" id="pills-2horas3-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-2horas3" type="button" role="tab"
+                                        aria-controls="pills-2horas3" aria-selected="true">2 horas</button>
+                              </li>
+                         </ul>
+                         <!--Pills Duração 3-->
+                         <div class="tab-content" id="pills-duracao3Content"><br>
+                              <!--1 hora-->
+                              <div class="tab-pane fade" id="pills-1hora3" role="tabpanel"
+                                   aria-labelledby="pills-1hora3-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Aulas mais rápidas são uma boa escolha para quem tem horários
+                                        apertados,
+                                        mas são igualmente produtivas. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 1 hora 3-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-1qtd3" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas7-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas7" type="button" role="tab"
+                                                  aria-controls="pills-4aulas7" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas7-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas7" type="button" role="tab"
+                                                  aria-controls="pills-8aulas7" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas7-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas7" type="button" role="tab"
+                                                  aria-controls="pills-12aulas7" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 1 hora 3-->
+                                   <div class="tab-content" id="pills-1hora3Content"><br>
+                                        <!--4 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-4aulas7" role="tabpanel"
+                                             aria-labelledby="pills-4aulas7-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 450,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 150,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-8aulas7" role="tabpanel"
+                                             aria-labelledby="pills-8aulas7-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 750,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 250,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 1-->
+                                        <div class="tab-pane fade" id="pills-12aulas7" role="tabpanel"
+                                             aria-labelledby="pills-12aulas7-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.080,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aula*: </b>R$ 360,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!--1 hora 30-->
+                              <div class="tab-pane fade" id="pills-1h303" role="tabpanel"
+                                   aria-labelledby="pills-1h303-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Essa é uma excelente duração de aula, pois pode contornar
+                                        facilmente os atrasos do início da aula e permite um melhor
+                                        fechamento, concedendo até mesmo um tempo para descontrair. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 1 hora 30 3-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-13qtd2" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas8-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas8" type="button" role="tab"
+                                                  aria-controls="pills-4aulas8" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas8-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas8" type="button" role="tab"
+                                                  aria-controls="pills-8aulas8" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas8-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas8" type="button" role="tab"
+                                                  aria-controls="pills-12aulas8" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 1 hora 30 3-->
+                                   <div class="tab-content" id="pills-1hora303Content"><br>
+                                        <!--4 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-4aulas8" role="tabpanel"
+                                             aria-labelledby="pills-4aulas8-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 600,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 200,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-8aulas8" role="tabpanel"
+                                             aria-labelledby="pills-8aulas8-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.050,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 350,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-12aulas8" role="tabpanel"
+                                             aria-labelledby="pills-12aulas8-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>1 hora 30 min p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.470,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 490,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <!--2 hora-->
+                              <div class="tab-pane fade" id="pills-2horas3" role="tabpanel"
+                                   aria-labelledby="pills-2horas3-tab">
+                                   <div style="border-top: 1px darkgray solid; border-bottom: 1px gray solid; 
+                                        border-radius: 5px;" class="p-4 fs-5">
+                                        Se você dispõe de mais tempo para estudar, esta é uma
+                                        boa opção, pois permite que os conteúdos sejam mais aprofundados
+                                        durante a mesma aula, evitando que as matérias sejam interrompidas
+                                        devido a falta de tempo. <br><br>
+                                        Por fim, escolha a <b>pacote de aulas</b> que deseja ter por mês:
+                                   </div><br>
+                                   <!--Nav 2 hora 2-->
+                                   <ul class="nav nav-pills nav-fill nav-justify mb-3" id="pills-2qtd3" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-4aulas9-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-4aulas9" type="button" role="tab"
+                                                  aria-controls="pills-4aulas9" aria-selected="false">4 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-8aulas9-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-8aulas9" type="button" role="tab"
+                                                  aria-controls="pills-8aulas9" aria-selected="false">8 aulas</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                             <button class="nav-link" id="pills-12aulas9-tab" data-bs-toggle="pill"
+                                                  data-bs-target="#pills-12aulas9" type="button" role="tab"
+                                                  aria-controls="pills-12aulas9" aria-selected="true">12 aulas</button>
+                                        </li>
+                                   </ul>
+                                   <!--Pills 2 hora 2-->
+                                   <div class="tab-content" id="pills-2horas3Content"><br>
+                                        <!--4 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-4aulas9" role="tabpanel"
+                                             aria-labelledby="pills-4aulas9-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>4 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 780,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 260,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--8 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-8aulas9" role="tabpanel"
+                                             aria-labelledby="pills-8aulas9-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>8 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.380,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 460,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                        <!--12 aulas 3-->
+                                        <div class="tab-pane fade" id="pills-12aulas9" role="tabpanel"
+                                             aria-labelledby="pills-12aulas9-tab">
+                                             <p>
+                                                  Parabéns! Você escolheu seu plano de estudos e está a um
+                                                  passo de
+                                                  alcançar a fluência no Inglês com a <b>Sixess</b>.
+                                             </p>
+                                             <ul class="list-group">
+                                                  <li class="list-group-item">
+                                                       <b>Turma: </b>3 alunos
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Duração: </b>2 horas p/ aula
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Pacote: </b>12 aulas p/ mês
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Mensalidade: </b>R$ 1.920,00
+                                                  </li>
+                                                  <li class="list-group-item">
+                                                       <b>Valor p/ aluno*: </b>R$ 640,00
+                                                  </li>
+                                             </ul><br>
+                                             <p>
+                                                  É isso que você estava procurando? Clique no botão abaixo
+                                                  para acessar o formulário de Inscrição.
+                                                  Após a confirmação da inscrição, você receberá o contato da
+                                                  administração por e-mail ou whatsapp
+                                                  para dar continuidade na matrícula. Certifique-se de olhar a
+                                                  agenda antes de escolher o horário e
+                                                  dia da semana desejado.
+                                             </p><br>
+                                             <div class="primary-button2">
+                                                  <a href="http://eepurl.com/hWs2y5" target="_blank">
+                                                       Inscreva-se
+                                                  </a>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!--Contato-->
+     <section id="contato" class="contact-form"><br><br><br>
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <br>
+               <p style="text-align: center !important;">
+                    <i class="fa fa-comment-alt" style="font-size: xx-large;"></i>
+               </p>
+               <h2><b>Contato</b></h2><br>
+               <div class="row">
+                    <div class="col">
+                         <p>
+                              Tem dúvidas de sobre os cursos, agenda, preços ou metodologia da Sixess?
+                              Entre em contato através do
+                              <a href="https://contate.me/sixess" target="_blank">WhatsApp</a>
+                              ou preencha o formulário de e-mail abaixo. <br><br>
+                              Converse com a administração se quiser um pacote de aulas diferentes dos
+                              expostos ou se quiser algum horário fora da agenda, o caso será analisado
+                              e uma exceção poderá ser aberta. <br><br>
+                              Através do contato, você poderá solicitar uma <b>Aula Experimental</b> e ainda
+                              receber um link para realizar seu <b>Teste de Nivelamento</b>. Além disso,
+                              você também poderá solicitar um <b>Login de Demonstração</b> da plataforma de estudo, caso
+                              esteja curioso de como funciona. Tudo isso sem custo algum! <br><br>
+                              Está esperando o quê? Venha dominar o inglês e conquistar o mundo com a Sixess!
+                         </p><br>
+
+                         <form id="contact" action="https://formspree.io/f/mlezokjl" method="post">
+                              <div class="row">
+                                   <div class="col-md-12">
+                                        <fieldset>
+                                             <input name="name" type="text" class="form-control" id="name"
+                                                  placeholder="Seu nome..." required="">
+                                        </fieldset>
+                                   </div>
+                                   <div class="col-md-12">
+                                        <fieldset>
+                                             <input name="email" type="text" class="form-control" id="email"
+                                                  placeholder="Seu e-mail..." required="">
+                                        </fieldset>
+                                   </div>
+                                   <div class="col-md-12">
+                                        <fieldset>
+                                             <textarea name="message" rows="6" class="form-control" id="message"
+                                                  placeholder="Sua mensagem..." required=""></textarea>
+                                        </fieldset>
+                                   </div>
+                                   <div class="col-md-12">
+                                        <fieldset>
+                                             <button type="submit" id="form-submit" class="button">Enviar <i
+                                                       class="fa fa-mail-forward"></i></button>
+                                        </fieldset>
+                                   </div>
+                              </div>
+                         </form>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!--Inscricao-->
+     <!-- <section id="inscricao" class="contact-form">
+          <div class="container shadow-sm p-5 mb-5 bg-body rounded">
+               <br>
+               <p style="text-align: center !important;">
+                    <i class="fa fa-edit" style="font-size: xx-large;"></i>
+               </p>
+               <h2>Inscrição</h2><br>
+               <p>
+                    Antes de formalizar sua inscrição, é importante que tenha assistido os vídeos, entrado em contato
+                    com o teacher, conferido a <a href="#agenda">Agenda Semanal</a> e a tabela de <a
+                         href="#precos">Preços e Serviços</a> , tirando todas as dúvidas que tiver.
+                    <br><br>
+                    Preencha os campos abaixo de acordo com sua preferência de estudos. Aguarde o contato do teacher,
+                    dentro do prazo de 2 dias úteis, confirmando a disponibilidade e os próximos passos.
+               </p><br>
+               <form class="needs-validation" novalidate="">
+                    <div class="row g-3">
+                         <div class="col-sm-6">
+                              <label for="firstName" class="form-label">Nome</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                   required="">
+                              <div class="invalid-feedback">
+                                   Informe o seu nome.
+                              </div>
+                         </div>
+
+                         <div class="col-sm-6">
+                              <label for="lastName" class="form-label">Sobrenome</label>
+                              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                              <div class="invalid-feedback">
+                                   Informe o seu sobrenome.
+                              </div>
+                         </div>
+
+                         <div class="col-12">
+                              <label for="email" class="form-label">E-mail</label>
+                              <input type="email" class="form-control" id="email" placeholder="seu@email.com" value=""
+                                   required="">
+                              <div class="invalid-feedback">
+                                   Informe um endereço de e-mail válido para contato.
+                              </div>
+                         </div>
+
+                         <div class="col-12">
+                              <label for="address" class="form-label">Endereço Completo</label>
+                              <input type="text" class="form-control" id="address" placeholder="Rua 1 Nº 2" required="">
+                              <div class="invalid-feedback">
+                                   Informe seu endereço completo.
+                              </div>
+                         </div>
+
+                         <div class="col-md-3">
+                              <label for="zip" class="form-label">CEP</label>
+                              <input type="text" class="form-control" id="zip" placeholder="" required="">
+                              <div class="invalid-feedback">
+                                   Informe seu CEP.
+                              </div>
+                         </div>
+                    </div>
+
+                    <button class="w-50 btn btn-primary btn-lg" type="submit">Concluir Inscrição</button>
+               </form>
+          </div>
+     </section> -->
+
+     <!--Footer-->
+     <!-- <footer class="footer mt-auto py-3">
+          <a href="#" class="btn btn-secondary px-2 back-to-top" style="display: inline;">
+               <i class="fa fa-angle-double-up"></i>
+          </a>
+     </footer> -->
+
+     <!-- SCRIPTS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+     </script>
+     <script src="js/agenda.js"></script>
+</body>
+
+</html>
